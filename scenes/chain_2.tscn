@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://d33dsbwhpjecp"]
+
+[ext_resource type="Texture2D" uid="uid://b1lerj871c8qp" path="res://assets/sprites/chain.png" id="1_dr8ia"]
+[ext_resource type="Script" path="res://script/chain_2_test.gd" id="1_fongy"]
+
+[node name="Chain2" type="Node2D"]
+position = Vector2(468, 282)
+script = ExtResource("1_fongy")
+metadata/_edit_group_ = true
+
+[node name="Chain" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("1_dr8ia")
+offset = Vector2(8, 0)
+region_enabled = true
+region_rect = Rect2(0, 6, 16, 4)
+
+[node name="CollidingObject" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+target_position = Vector2(150, 0)
